@@ -1241,4 +1241,24 @@
       <index name="user_nicename" unique="false" columns="user_nicename"/>
     </table>
   </data-source>
+  <data-source source="LOCAL" name="Data Source" product="MySQL" version="5.5.16-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.26 ( Revision: ${bzr.revision-id} )" uuid="35b18517-2f7d-4897-bf07-77552e920822">
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <extra-name-characters>#@</extra-name-characters>
+    <identifier-quote-string>`</identifier-quote-string>
+    <synchronize>true</synchronize>
+    <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+    <jdbc-url>jdbc:mysql://localhost/server_test</jdbc-url>
+    <user-name>root</user-name>
+    <schema-pattern>server_test.*</schema-pattern>
+    <default-dialect>MySQL</default-dialect>
+    <libraries>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/mysql-connector-java-5.1.26-bin.jar!/</url>
+      </library>
+      <library>
+        <url>file://$PROJECT_DIR$/lib/mysql-connector-license.txt</url>
+      </library>
+    </libraries>
+    <schema name="" catalog="server_test"/>
+  </data-source>
 </component>

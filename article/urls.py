@@ -1,10 +1,15 @@
 from django.conf.urls import patterns, include, url
+from api import ArticleResource
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()
 
+article_resource = ArticleResource()
+
 urlpatterns = patterns('',
-    (r'^articles/',include('article.urls')),
+    url(r'^all/$','article.views.articles'),
+    url(r'^get/(?P<article_id>\d+)/$','article.views.article'),
+    url(r'^api/',include(article_resource.urls)),
     # Examples:
     # url(r'^$', 'server_test.views.home', name='home'),
     # url(r'^server_test/', include('server_test.foo.urls')),
